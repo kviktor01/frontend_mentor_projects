@@ -50,22 +50,6 @@
       z-index: 101;
       display: none;
     }
-
-    &:hover {
-      cursor: pointer;
-      background-color: hsl(216, 50%, 16%);
-      backdrop-filter: hue(hsl(216, 50%, 16%));
-    }
-
-    &:hover::after {
-      background-image: url("images/image-avatar.png");
-      display: block;
-      position: absolute;
-      height: 200px;
-      width: 200px;
-      content: "";
-      z-index: 100;
-    }
   }
 
   &__header {
