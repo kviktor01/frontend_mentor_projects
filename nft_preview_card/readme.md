@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/kviktor01/frontend_mentor_projects/tree/main/nft_preview_card)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://tourmaline-sherbet-b0bc63.netlify.app/)
 
 ## My process
 
