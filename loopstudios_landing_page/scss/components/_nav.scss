@@ -1,0 +1,30 @@
+@use "../variables";
+
+.nav {
+  color: variables.$color-white;
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+    font-size: 2rem;
+    margin-left: 30px;
+    padding: 10px;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 2px;
+        width: 50%;
+        background-color: variables.$color-white;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
