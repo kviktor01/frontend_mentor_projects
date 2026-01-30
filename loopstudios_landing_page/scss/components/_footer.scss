@@ -1,0 +1,79 @@
+@use "../variables";
+
+.footer {
+  background-color: variables.$color-black;
+  color: variables.$color-white;
+  padding: 5rem 0;
+  margin-top: 10rem;
+
+  &__wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    gap: 3rem;
+  }
+
+  &__socials {
+    text-align: right;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+
+    & img {
+      margin: 0 0.7rem;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+
+    li {
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-3px);
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 2px;
+          width: 50%;
+          background-color: variables.$color-white;
+          bottom: -2px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+    text-align: right;
+  }
+
+}
+
+
+.social-img-wrapper:hover {
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 80%;
+    background-color: variables.$color-white;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+}

@@ -1,0 +1,38 @@
+@use "../variables";
+
+.creations {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    align-items: center;
+  }
+
+  &__see-all {
+    display: block;
+    padding: 0.5rem 3rem;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    flex-grow: 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: variables.$color-black;
+      color: variables.$color-white;
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 3rem;
+  }
+
+}

@@ -1,0 +1,44 @@
+@use "../variables";
+
+.card{
+  height: 400px;
+  position: relative;
+  transition: all .2s;
+
+  &__image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all .2s;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    position: absolute;
+    z-index: 10;
+    color: variables.$color-white;
+    bottom: 3rem;
+    left: 4rem;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    text-shadow: 0 5px 4px variables.$color-black;
+    width: 50%;
+    transition: all .2s;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    & .card__image {
+      opacity: 0.4;
+    }
+
+    & .card__title {
+      color: variables.$color-black;
+      text-shadow: none;
+    }
+
+  }
+}

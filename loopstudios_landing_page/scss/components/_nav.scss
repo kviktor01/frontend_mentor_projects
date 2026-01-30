@@ -13,6 +13,7 @@
 
     &:hover {
       cursor: pointer;
+      transform: translateY(-3px);
 
       &::after {
         content: "";
