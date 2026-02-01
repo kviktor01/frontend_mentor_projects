@@ -28,4 +28,11 @@
       }
     }
   }
+
+  @media screen and (max-width: variables.$breakpoint-large) {
+    & {
+      display: none;
+    }
+  }
+
 }

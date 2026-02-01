@@ -41,4 +41,17 @@
     }
 
   }
+
+  @media screen and (max-width: variables.$breakpoint-large) {
+    & {
+      height: 300px;
+    }
+  }
+
+  @media screen and (max-width: variables.$breakpoint-small) {
+    & {
+      height: 150px;
+    }
+  }
+
 }

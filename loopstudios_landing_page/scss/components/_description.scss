@@ -1,9 +1,13 @@
 @use "../variables";
 
 .description {
-  max-width: 1200px;
-  margin: 10rem auto;
   position: relative;
+  padding: 0 2rem;
+
+  &__wrapper {
+    margin: 10rem auto;
+    max-width: 1200px;
+  }
 
   &__image {
     display: block;
@@ -30,4 +34,18 @@
     color: variables.$color-black;
     font-weight: 300;
   }
+
+ @media screen and (max-width: variables.$breakpoint-large) {
+   &__text {
+      position: relative;
+      width:100%;
+      text-align: center;
+   }
+    &__image {
+    
+      width: 100%;
+    }
+
+
+ }
 }

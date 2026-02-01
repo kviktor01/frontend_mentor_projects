@@ -1,3 +1,4 @@
+@use "variables";
 
 * {
   margin: 0;
@@ -7,6 +8,15 @@
 
 html {
   font-size: 62.5%;
+
+  @media screen and (max-width: variables.$breakpoint-medium) {
+    font-size: 50%;
+  }
+
+    @media screen and (max-width: variables.$breakpoint-small) {
+      font-size: 45%;
+    }
+
 }
 
 body {

@@ -1,8 +1,13 @@
 @use "../variables";
 
 .creations {
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 2rem;  
+
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
 
   &__header {
     display: flex;
@@ -19,6 +24,10 @@
     letter-spacing: 0.1em;
     flex-grow: 0;
 
+    &--mobile {
+      display: none;
+    }
+
     &:hover {
       cursor: pointer;
       background-color: variables.$color-black;
@@ -33,6 +42,30 @@
     justify-content: center;
     align-content: center;
     gap: 3rem;
+  }
+
+  @media screen and (max-width: variables.$breakpoint-large) {
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: variables.$breakpoint-small) {
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+    &__see-all {
+      display: none;
+
+      &--mobile {
+        display: block;
+        margin: 2rem auto;
+        padding: 1rem 3rem;
+      }
+    }
   }
 
 }

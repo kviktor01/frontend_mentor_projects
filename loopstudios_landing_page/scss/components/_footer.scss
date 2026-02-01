@@ -3,11 +3,11 @@
 .footer {
   background-color: variables.$color-black;
   color: variables.$color-white;
-  padding: 5rem 0;
+  padding: 5rem 2rem;
   margin-top: 10rem;
 
   &__wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -76,4 +76,41 @@
     transform: translateX(-50%);
 
   }
+}
+
+
+@media screen and (max-width: variables.$breakpoint-medium) {
+  .footer{
+    &__wrapper {
+      grid-template-columns: 1fr;
+      
+    }
+
+    &__socials {
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__nav {
+      display: block;
+      grid-row: 2;
+      text-align: center;
+      li {
+        display: block;
+
+        &:not(:first-child) {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+
+    &__copyright {
+      text-align: center;
+    }
+
+    &__logo {
+      margin: auto;
+    }
+  }
+
 }
