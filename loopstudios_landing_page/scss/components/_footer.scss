@@ -80,10 +80,10 @@
 
 
 @media screen and (max-width: variables.$breakpoint-medium) {
-  .footer{
+  .footer {
     &__wrapper {
       grid-template-columns: 1fr;
-      
+
     }
 
     &__socials {
@@ -95,6 +95,7 @@
       display: block;
       grid-row: 2;
       text-align: center;
+
       li {
         display: block;
 

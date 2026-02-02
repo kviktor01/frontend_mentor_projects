@@ -12,7 +12,7 @@
     align-items: center;
 
     & .hamburger-nav {
-        display: none;
+      display: none;
     }
   }
 
@@ -20,23 +20,23 @@
     width: 300px;
   }
 
- @media screen and (max-width: variables.$breakpoint-large) {
-   & {
-    padding: 5rem 5rem;
+  @media screen and (max-width: variables.$breakpoint-large) {
+    & {
+      padding: 5rem 5rem;
 
-    &__nav-wrapper .hamburger-nav {
+      &__nav-wrapper .hamburger-nav {
         display: block;
         width: 35px;
-    }
+      }
 
-    &__logo {
-      width: 200px;
+      &__logo {
+        width: 200px;
+      }
     }
-   }
- }
+  }
 
   @media screen and (max-width: variables.$breakpoint-small) {
-    
+
     &__logo {
       width: 150px;
     }
@@ -45,6 +45,6 @@
       display: block;
       width: 25px;
     }
-  
+
   }
 }

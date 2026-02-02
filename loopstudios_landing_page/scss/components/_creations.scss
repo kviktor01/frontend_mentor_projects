@@ -1,7 +1,7 @@
 @use "../variables";
 
 .creations {
-  padding: 2rem;  
+  padding: 2rem;
 
   &__wrapper {
     max-width: 1200px;
@@ -46,16 +46,16 @@
 
   @media screen and (max-width: variables.$breakpoint-large) {
     &-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
   @media screen and (max-width: variables.$breakpoint-small) {
     &-list {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
+      display: grid;
+      grid-template-columns: 1fr;
+    }
 
     &__see-all {
       display: none;

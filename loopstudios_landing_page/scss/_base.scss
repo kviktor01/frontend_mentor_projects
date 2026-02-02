@@ -13,9 +13,9 @@ html {
     font-size: 50%;
   }
 
-    @media screen and (max-width: variables.$breakpoint-small) {
-      font-size: 45%;
-    }
+  @media screen and (max-width: variables.$breakpoint-small) {
+    font-size: 45%;
+  }
 
 }
 
