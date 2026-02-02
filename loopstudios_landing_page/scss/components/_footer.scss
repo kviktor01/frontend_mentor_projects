@@ -1,117 +1,111 @@
 @use "../variables";
 
 .footer {
-  background-color: variables.$color-black;
-  color: variables.$color-white;
-  padding: 5rem 2rem;
-  margin-top: 10rem;
+	background-color: variables.$color-black;
+	color: variables.$color-white;
+	padding: 5rem 2rem;
+	margin-top: 10rem;
 
-  &__wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: center;
-    gap: 3rem;
-  }
+	&__wrapper {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-content: center;
+		gap: 3rem;
+	}
 
-  &__socials {
-    text-align: right;
-    align-self: center;
-    display: flex;
-    justify-content: flex-end;
+	&__socials {
+		text-align: right;
+		align-self: center;
+		display: flex;
+		justify-content: flex-end;
 
-    & img {
-      margin: 0 0.7rem;
-    }
-  }
+		& img {
+			margin: 0 0.7rem;
+		}
+	}
 
-  &__nav {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    font-size: 1.5rem;
+	&__nav {
+		list-style: none;
+		display: flex;
+		gap: 2rem;
+		font-size: 1.5rem;
 
-    li {
-      &:hover {
-        cursor: pointer;
-        transform: translateY(-3px);
+		li {
+			&:hover {
+				cursor: pointer;
+				transform: translateY(-3px);
 
-        &::after {
-          content: "";
-          position: absolute;
-          display: block;
-          height: 2px;
-          width: 50%;
-          background-color: variables.$color-white;
-          bottom: -2px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-    }
-  }
+				&::after {
+					content: "";
+					position: absolute;
+					display: block;
+					height: 2px;
+					width: 50%;
+					background-color: variables.$color-white;
+					bottom: -2px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
 
-  &__copyright {
-    font-size: 1.2rem;
-    text-align: right;
-  }
-
+	&__copyright {
+		font-size: 1.2rem;
+		text-align: right;
+	}
 }
-
 
 .social-img-wrapper:hover {
-  cursor: pointer;
-  position: relative;
+	cursor: pointer;
+	position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 2px;
-    width: 80%;
-    background-color: variables.$color-white;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-
-  }
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		height: 2px;
+		width: 80%;
+		background-color: variables.$color-white;
+		bottom: -5px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
-
 @media screen and (max-width: variables.$breakpoint-medium) {
-  .footer {
-    &__wrapper {
-      grid-template-columns: 1fr;
+	.footer {
+		&__wrapper {
+			grid-template-columns: 1fr;
+		}
 
-    }
+		&__socials {
+			text-align: center;
+			justify-content: center;
+		}
 
-    &__socials {
-      text-align: center;
-      justify-content: center;
-    }
+		&__nav {
+			display: block;
+			grid-row: 2;
+			text-align: center;
 
-    &__nav {
-      display: block;
-      grid-row: 2;
-      text-align: center;
+			li {
+				display: block;
 
-      li {
-        display: block;
+				&:not(:first-child) {
+					margin-top: 1.5rem;
+				}
+			}
+		}
 
-        &:not(:first-child) {
-          margin-top: 1.5rem;
-        }
-      }
-    }
+		&__copyright {
+			text-align: center;
+		}
 
-    &__copyright {
-      text-align: center;
-    }
-
-    &__logo {
-      margin: auto;
-    }
-  }
-
+		&__logo {
+			margin: auto;
+		}
+	}
 }

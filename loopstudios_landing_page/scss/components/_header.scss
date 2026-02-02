@@ -1,50 +1,73 @@
 @use "../variables";
 
 .header {
-  background-image: url(../images/desktop/image-hero.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 5rem 15rem;
+	background-image: url(../images/desktop/image-hero.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 5rem 15rem;
 
-  &__nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	&__nav-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-    & .hamburger-nav {
+		& input[type="checkbox"] {
+			display: none;
+		}
+
+		& .hamburger-nav {
+			display: none;
+		}
+
+    & .close-nav {
+			display: none;
+		}
+    
+    & .mobile-nav {
       display: none;
     }
-  }
 
-  &__logo {
-    width: 300px;
-  }
+		& input[type="checkbox"]:checked {
+			& ~ .hamburger-nav {
+        display: none;
+      }
 
-  @media screen and (max-width: variables.$breakpoint-large) {
-    & {
-      padding: 5rem 5rem;
-
-      &__nav-wrapper .hamburger-nav {
+      & ~ .close-nav {
         display: block;
-        width: 35px;
+        z-index: 200;
       }
+		}
 
-      &__logo {
-        width: 200px;
-      }
-    }
-  }
+	}
 
-  @media screen and (max-width: variables.$breakpoint-small) {
+	&__logo {
+		width: 300px;
+	}
 
-    &__logo {
-      width: 150px;
-    }
+	@media screen and (max-width: variables.$breakpoint-large) {
+		& {
+			padding: 5rem 5rem;
 
-    &__nav-wrapper .hamburger-nav {
-      display: block;
-      width: 25px;
-    }
+			&__nav-wrapper .hamburger-nav {
+				display: block;
+				width: 35px;
+			}
 
-  }
+			&__logo {
+				width: 200px;
+			}
+		}
+	}
+
+	@media screen and (max-width: variables.$breakpoint-small) {
+		&__logo {
+			width: 150px;
+		}
+
+		&__nav-wrapper .hamburger-nav {
+			display: block;
+			width: 25px;
+		}
+	}
 }

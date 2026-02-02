@@ -1,0 +1,41 @@
+input[type="checkbox"]:checked ~ .mobile-nav {
+	display: block;
+}
+
+input[type="checkbox"]:checked ~ .close-nav {
+    position: relative;
+transition: all 1s ;
+}
+
+.close-nav::after {
+    content: "";
+	display: block;
+	position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all 1s ;
+}
+
+input[type="checkbox"]:checked ~ .close-nav::after {
+	width: 2000rem;
+    height: 2000rem;
+    background-color: black;
+    transition: all 1s ;
+}
+
+.mobile-nav {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+
+	li {
+		display: block;
+	}
+}
