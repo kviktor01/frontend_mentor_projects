@@ -1,41 +1,65 @@
-input[type="checkbox"]:checked ~ .mobile-nav {
-	display: block;
+@use "../variables";
+
+.navigation__checkbox {
+  display: none;
 }
 
-input[type="checkbox"]:checked ~ .close-nav {
+.navigation__icon {
+  background-image: url("../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: none;
+
+  @media screen and (max-width: variables.$breakpoint-large) {
+    display: block;
+    width: 30px;
+    height: 25px;
     position: relative;
-transition: all 1s ;
+    z-index: 200;
+  }
 }
 
-.close-nav::after {
-    content: "";
-	display: block;
-	position: absolute;
-    width: 1rem;
-    height: 1rem;
-    background-color: transparent;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    transition: all 1s ;
+.navigation__background {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: variables.$color-black;
+  right: 55px;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: 100;
+  transition: all 0.4s;
 }
 
-input[type="checkbox"]:checked ~ .close-nav::after {
-	width: 2000rem;
-    height: 2000rem;
-    background-color: black;
-    transition: all 1s ;
-}
+.navigation__checkbox:checked {
+  & ~ .navigation__background {
+    visibility: visible;
+    transform: scale(200);
+    transform-origin: center;
+  }
 
-.mobile-nav {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 100;
+  & ~ .navigation__button .navigation__icon {
+    background-image: url("../images/icon-close.svg");
+    position: fixed;
+    right: 50px;
+    top: 52px;
+  }
 
-	li {
-		display: block;
-	}
+  @media screen and (max-width: variables.$breakpoint-large) {
+    & ~ .nav {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      z-index: 200;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    & ~ .nav .nav__item {
+      font-size: 3rem;
+    }
+  }
 }

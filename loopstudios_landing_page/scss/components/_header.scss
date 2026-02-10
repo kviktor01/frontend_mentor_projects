@@ -11,34 +11,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
-		& input[type="checkbox"] {
-			display: none;
-		}
-
-		& .hamburger-nav {
-			display: none;
-		}
-
-    & .close-nav {
-			display: none;
-		}
-    
-    & .mobile-nav {
-      display: none;
-    }
-
-		& input[type="checkbox"]:checked {
-			& ~ .hamburger-nav {
-        display: none;
-      }
-
-      & ~ .close-nav {
-        display: block;
-        z-index: 200;
-      }
-		}
-
 	}
 
 	&__logo {
