@@ -1,0 +1,15 @@
+{
+  "name": "room_homepage",
+  "version": "1.0.0",
+  "description": "![Design preview for the Room homepage coding challenge](preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch scss:css --style=expanded",
+    "sass:build": "sass scss:css --style=compressed --no-source-map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.97.3"
+  }
+}
